@@ -1,5 +1,7 @@
 resources:
 + https://perldoc.perl.org/perlintro
++ https://www.mathe2.uni-bayreuth.de/perl/start.htm
++ https://www.tutorialspoint.com/perl/index.htm
 
 ---
 
@@ -45,7 +47,7 @@ A Program is a series of statementes.
 Statements are terminated with a `;`
 
 ```perl
-print "Hello, world"
+print "Hello, world";
 ```
 # variables
 The variable types are:  _scalar_, _array_, _hash_
@@ -53,8 +55,10 @@ The variable types are:  _scalar_, _array_, _hash_
 + _array_
     + example
     ```perl
-    my @numbers = (17,26,21);
-    my @mixed = ("lion", 17, 1.13);
+    @numbers = (0..21); 
+    @numbers1 = (17,26,21);
+    @mixed = ("lion", 17, 1.13);
+    @characters = (a..z);
     ```
     + are zero indexed
     ```perl
@@ -64,24 +68,26 @@ The variable types are:  _scalar_, _array_, _hash_
     ```
     + methods
     ```perl
-    my @numbers2 = sort @numbers;
-    my @numbers3 = reverse @numbers;
+    @numbers2 = sort @numbers;
+    @numbers3 = reverse @numbers;
+    push @numbers2,@numbers3;
+    $val = pop @numbers3;
     ```
 + _hash_
     is a set of key-value pairs
     and can be represented like so:
     ```perl
-    my %weekdays = ("monday", 1, "tuesday", 2, "wednesday", 3, "thursday", 4, "friday", 5, "saturday", 6, "sunday", 7);
+    %weekdays = ("monday", 1, "tuesday", 2, "wednesday", 3, "thursday", 4, "friday", 5, "saturday", 6, "sunday", 7);
     ```
     ```perl
-    my %weekdays = (
-        monday      => 1,
-        tuesday     => 2,
-        wednesday   => 3,
-        thursday    => 4,
-        friday      => 5,
-        saturday    => 6,
-        sunday      => 7
+    %weekdays = (
+        "monday"      => 1,
+        "tuesday"     => 2,
+        "wednesday"   => 3,
+        "thursday"    => 4,
+        "friday"      => 5,
+        "saturday"    => 6,
+        "sunday"      => 7
     );
     ```
     + get a value
@@ -96,5 +102,7 @@ The variable types are:  _scalar_, _array_, _hash_
 
 # Files and Input-Output
 
-
-
+```pearl
+open(my $in, "<", "input.txt") or die "Can't open input.txt: $!";
+open(my $out, ">", "output.txt") or die "Can't open output.txt: $!";
+``` 

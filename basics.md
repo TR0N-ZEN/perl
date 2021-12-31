@@ -54,46 +54,46 @@ The variable types are:  _scalar_, _array_, _hash_
 + _scalar_
 + _array_
     + example
-    ```perl
-    @numbers = (0..21); 
-    @numbers1 = (17,26,21);
-    @mixed = ("lion", 17, 1.13);
-    @characters = (a..z);
-    ```
+    	```perl
+    	@numbers = (0..21); 
+    	@numbers1 = (17,26,21);
+    	@mixed = ("lion", 17, 1.13);
+    	@characters = (a..z);
+    	```
     + are zero indexed
-    ```perl
-    @numbers[0,2];              # returns first and third element
-    @numbers[0..2];             # returns all elements from index 0 to index 2, including those from index 0 and 2
-    @numbers[1...$#numbers];    # returns all except the first element
-    ```
+    	```perl
+    	@numbers[0,2];              # returns first and third element
+    	@numbers[0..2];             # returns all elements from index 0 to index 2, including those from index 0 and 2
+    	@numbers[1...$#numbers];    # returns all except the first element
+    	```
     + methods
-    ```perl
-    @numbers2 = sort @numbers;
-    @numbers3 = reverse @numbers;
-    push @numbers2,@numbers3;
-    $val = pop @numbers3;
-    ```
-+ _hash_
-    is a set of key-value pairs
-    and can be represented like so:
-    ```perl
-    %weekdays = ("monday", 1, "tuesday", 2, "wednesday", 3, "thursday", 4, "friday", 5, "saturday", 6, "sunday", 7);
-    ```
-    ```perl
-    %weekdays = (
-        "monday"      => 1,
-        "tuesday"     => 2,
-        "wednesday"   => 3,
-        "thursday"    => 4,
-        "friday"      => 5,
-        "saturday"    => 6,
-        "sunday"      => 7
-    );
-    ```
-    + get a value
-    ```perl
-    $weekdays{"monday"}; # returns 1
-    ```
+    	```perl
+    	@numbers2 = sort @numbers;
+    	@numbers3 = reverse @numbers;
+    	push @numbers2,@numbers3;
+    	$val = pop @numbers3;
+    	```
++ _hash_  
+is a set of key-value pairs
+	+ set  
+		```perl
+		%weekdays = ("monday", 1, "tuesday", 2, "wednesday", 3, "thursday", 4, "friday", 5, "saturday", 6, "sunday", 7);
+		```
+		```perl
+		%weekdays = (
+				"monday"      => 1,
+				"tuesday"     => 2,
+				"wednesday"   => 3,
+				"thursday"    => 4,
+				"friday"      => 5,
+				"saturday"    => 6,
+				"sunday"      => 7
+		);
+		```
+  + get a value
+		```perl
+		$weekdays{"monday"}; # returns 1
+		```
 
 # ...
 ...
@@ -102,7 +102,16 @@ The variable types are:  _scalar_, _array_, _hash_
 
 # Files and Input-Output
 
-```pearl
+```perl
 open(my $in, "<", "input.txt") or die "Can't open input.txt: $!";
 open(my $out, ">", "output.txt") or die "Can't open output.txt: $!";
 ``` 
+
+
+---
+
+### strings 
+<details><summary>escape Characters</summary>  
+
+![escapeCharacters](./pics/escapeCharacters.png)
+</details>

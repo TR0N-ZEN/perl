@@ -48,6 +48,8 @@ print "$hour h  "; print "$min m\n";
 
 $string = "The food is in the salad bar";
 $string =~ m/foo/;
-print "Before: $`\n";
-print "Matched: $&\n";
-print "After: $'\n";
+print "string before the matched string: $`\n";
+print "matched string: $&\n";
+print "string after th matched string: $'\n";
+
+##

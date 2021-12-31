@@ -59,6 +59,7 @@ The variable types are:  _scalar_, _array_, _hash_
     	@numbers1 = (17,26,21);
     	@mixed = ("lion", 17, 1.13);
     	@characters = (a..z);
+			@ARGV # the array of arguments passed to this program
     	```
     + are zero indexed
     	```perl
@@ -73,9 +74,8 @@ The variable types are:  _scalar_, _array_, _hash_
     	push @numbers2,@numbers3;
     	$val = pop @numbers3;
     	```
-+ _hash_  
-is a set of key-value pairs
-	+ set  
++ _hash_ (is a set of key-value pairs)
+	+ set
 		```perl
 		%weekdays = ("monday", 1, "tuesday", 2, "wednesday", 3, "thursday", 4, "friday", 5, "saturday", 6, "sunday", 7);
 		```
@@ -90,11 +90,10 @@ is a set of key-value pairs
 				"sunday"      => 7
 		);
 		```
-  + get a value
-		```perl
-		$weekdays{"monday"}; # returns 1
-		```
-
+  + get a value  
+	  ```perl
+	  $weekdays{"monday"}; # returns 1
+	  ```
 # ...
 ...
 
